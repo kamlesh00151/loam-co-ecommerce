@@ -1,0 +1,19 @@
+{
+  "name": "loam-co-backend",
+  "version": "1.0.0",
+  "description": "Backend API for Loam & Co. e-commerce app",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "seed": "node seed.js",
+    "build": "npm install --prefix ../frontend && npm run build --prefix ../frontend && rm -rf ./public && cp -r ../frontend/dist ./public"
+  },
+  "dependencies": {
+    "better-sqlite3": "^11.3.0",
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "morgan": "^1.10.0"
+  }
+}
